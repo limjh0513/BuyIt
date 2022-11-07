@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Buy It</string>
+
+    <string name="string_buy">구매함</string>
+    <string name="string_notbuy">구매하지 않음</string>
+    <string name="string_think">고민중</string>
+</resources>
