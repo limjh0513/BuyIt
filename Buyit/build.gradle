@@ -18,8 +18,7 @@ ext{
     fragment_version = "1.5.4"
     activity_version = "1.5.1"
 
-    rxJava_version = "3.1.5"
-    rxAndroid_version = "3.0.0"
+    room_version="2.4.3"
 }
 
 task clean(type: Delete) {
