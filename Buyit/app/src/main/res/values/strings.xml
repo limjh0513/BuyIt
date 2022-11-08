@@ -4,4 +4,13 @@
     <string name="string_buy">구매함</string>
     <string name="string_notbuy">구매하지 않음</string>
     <string name="string_think">고민중</string>
+    <string name="string_add">등록하기</string>
+    <string name="stirng_hint">앱을 사용한 후 지금까지</string>
+    <string name="stirng_buyhint">이나\n 사용했어요!</string>
+    <string name="stirng_notbuyhint">이나\n 아꼈어요!</string>
+
+    <string name="string_write_name">이름</string>
+    <string name="string_write_price">가격(원)</string>
+    <string name="string_write_reason">필요한 이유</string>
+    <string name="string_write_link">구매 링크</string>
 </resources>
