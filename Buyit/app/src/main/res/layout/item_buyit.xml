@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="product"
+            type="kr.hs.dgsw.jaehyeon.model.entity.Product" />
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/item_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="4dp"
@@ -30,6 +33,7 @@
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
+                android:text="@{product.component2()}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="아이폰 14" />
@@ -44,6 +48,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="normal"
+                android:text="@{product.component4()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -67,6 +72,8 @@
                 android:textColor="@color/color_think"
                 android:paddingBottom="8dp"
                 android:textSize="12sp"
+                setItemPriceText="@{product}"
+                setItemPriceBackground="@{product.component6()}"
                 app:layout_constraintBottom_toBottomOf="@+id/item_tvName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
