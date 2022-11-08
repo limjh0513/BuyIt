@@ -12,7 +12,7 @@ interface ProductDao {
     fun getProductById(pid: Int): Product
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertProduct(product: Product)
+    suspend fun insertProduct(vararg product: Product)
 
     @Update
     suspend fun updateState(product: Product)

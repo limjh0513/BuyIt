@@ -14,13 +14,13 @@
         android:theme="@style/Theme.BuyIt"
         tools:targetApi="31">
         <activity
-            android:name=".WriteActivity"
+            android:name=".view.activity.WriteActivity"
             android:exported="false" />
         <activity
-            android:name=".ChartActivity"
+            android:name=".view.activity.ChartActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".view.activity.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".view.activity.MainActivity"

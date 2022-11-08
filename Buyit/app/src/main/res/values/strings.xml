@@ -12,5 +12,5 @@
     <string name="string_write_name">이름</string>
     <string name="string_write_price">가격(원)</string>
     <string name="string_write_reason">필요한 이유</string>
-    <string name="string_write_link">구매 링크</string>
+    <string name="string_write_link">구매 링크(선택)</string>
 </resources>
