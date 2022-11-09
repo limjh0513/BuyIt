@@ -3,6 +3,8 @@ package kr.hs.dgsw.jaehyeon.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        Log.e("df", "onResume")
         viewModel.getAllProduct()
     }
 
@@ -39,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         with(viewModel){
             products.observe(this@MainActivity, Observer {
                 adapter.submitList(it)
+            })
+
+            onErrorEvent.observe(this@MainActivity, Observer {
+                Toast.makeText(this@MainActivity, "데이터 조회 중 문제가 발생했습니다.", Toast.LENGTH_SHORT).show()
             })
         }
     }

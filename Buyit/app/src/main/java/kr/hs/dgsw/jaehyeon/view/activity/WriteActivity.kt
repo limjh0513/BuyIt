@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,7 +32,14 @@ class WriteActivity : AppCompatActivity() {
         binding.executePendingBindings()
 
         with(viewModel) {
+            onSuccessEvent.observe(this@WriteActivity, Observer {
+                Toast.makeText(this@WriteActivity, "등록 성공!", Toast.LENGTH_SHORT).show()
+                this@WriteActivity.finish()
+            })
 
+            onErrorEvent.observe(this@WriteActivity, Observer {
+                Toast.makeText(this@WriteActivity, "등록에 실패했습니다... 다시 시도해주세요", Toast.LENGTH_SHORT).show()
+            })
         }
     }
 
@@ -48,7 +56,6 @@ class WriteActivity : AppCompatActivity() {
             Log.e("dfas", "${name.value} ${price.value} ${reason.value} ${link.value}")
             if (name.value != "" && price.value != "" && reason.value != "" && link.value != "") {
                 insertProduct()
-
                 Log.e("adsf", "in")
             } else {
                 Toast.makeText(this@WriteActivity, "이름, 가격, 이유를 모두 입력해주세요!", Toast.LENGTH_SHORT)

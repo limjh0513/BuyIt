@@ -11,5 +11,5 @@ data class Product(
     @ColumnInfo(name="price") val price: Int,
     @ColumnInfo(name="reason") val reason: String,
     @ColumnInfo(name="link") val link: String?,
-    @ColumnInfo(name="state") val state: Int, // 0: 고민중, 1: 구매함, 2: 구매안함
+    @ColumnInfo(name="state") var state: Int, // 0: 고민중, 1: 구매함, 2: 구매안함
 )
