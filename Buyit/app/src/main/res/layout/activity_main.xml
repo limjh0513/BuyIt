@@ -65,5 +65,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/main_logo"
             tools:listitem="@layout/item_buyit" />
+
+        <TextView
+            android:id="@+id/main_tvTool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/background_notbuy"
+            android:padding="12dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="@string/string_tool"
+            android:textColor="@color/color_notBuy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_logo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

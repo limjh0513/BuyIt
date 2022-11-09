@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         with(viewModel){
             products.observe(this@MainActivity, Observer {
                 adapter.submitList(it)
+                binding.mainTvTool.isVisible = it.isEmpty()
             })
 
             onErrorEvent.observe(this@MainActivity, Observer {

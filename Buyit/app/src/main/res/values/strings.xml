@@ -14,4 +14,5 @@
     <string name="string_write_reason">필요한 이유</string>
     <string name="string_write_link">구매 링크(선택)</string>
     <string name="string_link">구매 링크 :</string>
+    <string name="string_tool">아직 등록 된 물품이 없어요!\n구매하고 싶은 물품을 등록해봐요!</string>
 </resources>
