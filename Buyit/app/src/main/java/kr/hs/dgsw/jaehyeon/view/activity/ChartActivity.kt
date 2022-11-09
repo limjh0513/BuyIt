@@ -55,9 +55,9 @@ class ChartActivity : AppCompatActivity() {
     private fun calcPrice() {
         val result: Int = bPrice - nPrice
         val str = if (bPrice >= nPrice) {
-            "총 ${result}원을\n사용했어요!"
+            "총 ${PriceHelper.getPriceComma(result)}원을\n사용했어요!"
         } else {
-            "총 ${result * -1}원을\n아꼈어요!"
+            "총 ${PriceHelper.getPriceComma(result * -1)}원을\n아꼈어요!"
         }
 
         binding.chartTvTotal.text = "$str"
